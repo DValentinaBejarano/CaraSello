@@ -74,6 +74,7 @@ function disableBtn() {
     }, 3000);
 }
 
+//Ingresar nombre de usuario
 let nombre
 let edad
 nombre = prompt("Digite su nombre completo: ");
