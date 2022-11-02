@@ -8,23 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Carisellazo</title>
 </head>
-
 <body>
+    
     <div class="container">
         <div class="imgs">
-            <img class="face" src="https://www.banrep.gov.co/sites/default/files/paginas/nueva_1000_cara_235.jpg" alt="">
-            <img class="back" src="https://www.banrep.gov.co/sites/default/files/paginas/nueva_1000_sello_235.jpg" alt="">
+            <img class="face" src="https://www.banrep.gov.co/sites/default/files/paginas/nueva_1000_cara_235.jpg"
+                alt="">
+            <img class="back" src="https://www.banrep.gov.co/sites/default/files/paginas/nueva_1000_sello_235.jpg"
+                alt="">
+        </div>
+        <div id="mensaje" class="mensaje">
+            <h5>Usted ganó</h5>
+        </div>
+        <div id="mensaje1" class="mensaje1">
+            <h5>Usted perdió</h5>
         </div>
         <div class="scores">
-            <span class="faces">Hola</span>
+            <span class="faces"></span>
             <span class="backs"></span>
         </div>
         <div class="options">
             <button class="flip">Lanzar</button>
             <button class="reset">Reiniciar</button>
         </div>
+        
     </div>
+
+    
     <script src="/CaraSello.js"></script>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </html>
