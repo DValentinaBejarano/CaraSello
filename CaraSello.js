@@ -84,16 +84,19 @@ if (edad >= 18) {
         setTimeout(updateStats, 3000);
         disableBtn();
 
+        main.classList.replace('mainActivo', 'main')
 
     })
 } else if (edad <= 0) {
     alert("Ingrese un valor real");
     console.log(`Ingrese un valor real`)
     container.classList.replace('container', 'containerOculto')
+    main.classList.replace('main', 'mainActivo')
 } else {
     alert("Usted es menor de edad, no le es permitido jugar");
     console.log(`Usted es menor de edad, no le es permitido jugar`)
     container.classList.replace('container', 'containerOculto')
+    main.classList.replace('main', 'mainActivo')
 }
 
 
