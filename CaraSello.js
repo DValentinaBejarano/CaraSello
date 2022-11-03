@@ -8,10 +8,6 @@ let backs = document.querySelector('.backs');
 let heads = tails = 0;
 initialisation();
 
-
-
-
-
 reset.addEventListener("click", () => {
     heads = 0;
     tails = 0;
@@ -44,38 +40,48 @@ nombre = prompt("Digite su nombre completo: ");
 edad = prompt("Ingrese su edad");
 
 if (edad >= 18) {
+    let contador = 0, operacion = 0;
     alert("Usted es mayor de edad, puede jugar y apostar las veces que desee ¡Que disfrute el juego!");
     console.log(`Usted es mayor de edad, puede jugar y apostar las veces que desee ¡Que disfrute el juego!`)
     flip.addEventListener("click", () => {
         let i = Math.floor(Math.random() * 2);
         imgs.style.animation = "none";
         setTimeout(coin.play(), 3000);
-        const mensaje = document.getElementById("mensaje")
-        const mensaje1 = document.getElementById("mensaje1")
+        const mensaje = document.getElementById("mensaje");
+        const mensaje1 = document.getElementById("mensaje1");
 
-        let seleccion
+        let seleccion;
+        contador++;
         seleccion = prompt("¿Qué opción desea elegir: 1. Cara 2. Sello")
         if (i) {
+            let apuesta = document.getElementById("apuesta").value;
+            apuesta = parseFloat(apuesta)
             setTimeout(function () {
                 imgs.style.animation = "spin-heads 4s forwards";
                 if (i == seleccion) {
                     mensaje1.classList.replace('active', 'mensaje1')
                     mensaje.classList.replace('mensaje', 'active')
+                    operacion = operacion + apuesta;
                 } else {
                     mensaje.classList.replace('active', 'mensaje')
                     mensaje1.classList.replace('mensaje1', 'active')
+                    operacion = operacion - apuesta;
                 }
             }, 100);
             heads++;
         } else {
+            let apuesta = document.getElementById("apuesta").value;
+            apuesta = parseFloat(apuesta)
             setTimeout(function () {
                 imgs.style.animation = "spin-tails 4s forwards";
                 if (i == seleccion) {
                     mensaje1.classList.replace('active', 'mensaje1')
                     mensaje.classList.replace('mensaje', 'active')
+                    operacion = operacion + apuesta;
                 } else {
                     mensaje.classList.replace('active', 'mensaje')
                     mensaje1.classList.replace('mensaje1', 'active')
+                    operacion = operacion - apuesta;
                 }
 
             }, 100);
@@ -85,6 +91,11 @@ if (edad >= 18) {
         disableBtn();
 
         main.classList.replace('mainActivo', 'main')
+      
+    })
+    const finalizar = document.getElementById("terminar");
+    finalizar.addEventListener('click', () => {
+        alert(`Usted tiene un acumulado de ${operacion}, y las veces que usted jugó fueron: ${contador}`)
 
     })
 } else if (edad <= 0) {
