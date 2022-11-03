@@ -61,7 +61,7 @@ if (edad >= 18) {
                 if (i == seleccion) {
                     mensaje1.classList.replace('active', 'mensaje1')
                     mensaje.classList.replace('mensaje', 'active')
-                    operacion = operacion + apuesta;
+                    operacion = operacion + apuesta*2;
                 } else {
                     mensaje.classList.replace('active', 'mensaje')
                     mensaje1.classList.replace('mensaje1', 'active')
@@ -77,7 +77,7 @@ if (edad >= 18) {
                 if (i == seleccion) {
                     mensaje1.classList.replace('active', 'mensaje1')
                     mensaje.classList.replace('mensaje', 'active')
-                    operacion = operacion + apuesta;
+                    operacion = operacion + apuesta*2;
                 } else {
                     mensaje.classList.replace('active', 'mensaje')
                     mensaje1.classList.replace('mensaje1', 'active')

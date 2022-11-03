@@ -81,6 +81,17 @@ button {
 
 }
 
+.terminar {
+    background-color:rgb(192, 151, 211);
+    color: #ffffff;
+    left: 10%;
+
+}
+
+.apu{
+    margin-bottom: 3em;
+}
+
 .reset {
     background-color:rgb(145, 197, 218);
     color: white;
@@ -231,3 +242,23 @@ button {
      
     
 } 
+
+
+@media (max-width: 230px) and (max-width: 500px) {
+    .container {
+        background: #fff;
+        border-radius: 10px;
+        width: 210px;
+        padding: 30px;
+        perspective: 300px;
+        box-shadow: 0 10px 30px 0 #56b1ed;
+        position: fixed;
+        display: block;
+    }
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
