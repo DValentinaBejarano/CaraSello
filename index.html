@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    
+   
     <div id="container" class="container">
+        <input id="apuesta" class="input is-info" type="text" placeholder="¿Cuánto desea apostar?">
         <div class="imgs">
             <img class="face" src="https://www.banrep.gov.co/sites/default/files/paginas/nueva_1000_cara_235.jpg"
                 alt="">
@@ -28,23 +29,14 @@
             <span class="faces"></span>
             <span class="backs"></span>
         </div>
-         <!-- Valor a apostar-->
-         <h5>Ingrese el valor que desea apostar: </h5><br>
-        <input type="text" id="apuesta">
-        
+       
         <div class="options">
             <button class="flip">Lanzar</button>
-            <button class="reset">Reiniciar</button>
-            <button class="terminar" id="terminar">Finalizar</button>
+            <button class="reset">Finalizar</button>
+            <button class="terminar" id="terminar">Resultado</button>
         </div>
 
-       
-   
-        
     </div>
-
-
-
 
     <div id="main" class="main">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="470" height="290"
@@ -114,6 +106,4 @@
 
     <script src="/CaraSello.js"></script>
 </body>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 </html>

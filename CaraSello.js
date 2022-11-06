@@ -8,7 +8,9 @@ let backs = document.querySelector('.backs');
 let heads = tails = 0;
 initialisation();
 
+
 reset.addEventListener("click", () => {
+    window.location.reload(true);
     heads = 0;
     tails = 0;
     initialisation();
@@ -34,8 +36,9 @@ function disableBtn() {
 //Ingresar nombre de usuario
 let nombre
 let edad
-const container = document.getElementById("container")
-const main = document.getElementById("main")
+const container = document.getElementById("container");
+const main = document.getElementById("main");
+const caja = document.getElementById("caja");
 nombre = prompt("Digite su nombre completo: ");
 edad = prompt("Ingrese su edad");
 
@@ -90,24 +93,27 @@ if (edad >= 18) {
         setTimeout(updateStats, 3000);
         disableBtn();
 
-        main.classList.replace('mainActivo', 'main')
+        main.classList.replace('mainActivo', 'main');
+        caja.classList.replace('cajaActivo', 'caja');
       
     })
     const finalizar = document.getElementById("terminar");
     finalizar.addEventListener('click', () => {
-        alert(`Usted tiene un acumulado de ${operacion}, y las veces que usted jugó fueron: ${contador}`)
+        alert(`${nombre}, usted tiene un acumulado de ${operacion}, y las veces que jugó fueron: ${contador}`)
 
     })
 } else if (edad <= 0) {
     alert("Ingrese un valor real");
-    console.log(`Ingrese un valor real`)
-    container.classList.replace('container', 'containerOculto')
-    main.classList.replace('main', 'mainActivo')
+    console.log(`Ingrese un valor real`);
+    container.classList.replace('container', 'containerOculto');
+    main.classList.replace('main', 'mainActivo');
+    caja.classList.replace('caja', 'cajaActivo');
 } else {
     alert("Usted es menor de edad, no le es permitido jugar");
-    console.log(`Usted es menor de edad, no le es permitido jugar`)
-    container.classList.replace('container', 'containerOculto')
-    main.classList.replace('main', 'mainActivo')
+    console.log(`Usted es menor de edad, no le es permitido jugar`);
+    container.classList.replace('container', 'containerOculto');
+    main.classList.replace('main', 'mainActivo');
+    caja.classList.replace('caja', 'cajaActivo');
 }
 
 
